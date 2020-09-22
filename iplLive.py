@@ -35,13 +35,13 @@ def getData(data):
     for i in range(0,10):
         result=data['matches'][i]['header']['status']
         #Checking the match is ipl or not and has started or not
-        if data['matches'][i]['series_name'] == 'Indian Premier League 2020' and 'Starts' not in result:
+        if data['matches'][i]['series_name'] == 'Indian Premier League 2020' and 'Starts' not in result and 'won' and 'loss' not in result:
             break
         # else:
         #     return 'Invalid'
 
-    if 'won' or 'loss' in result:
-       return result
+    # if 'won' or 'loss' in result:
+    #    return result
     
     #Getting teams names
 
@@ -58,7 +58,7 @@ def getData(data):
     else:
         title=team1 + " VS "+ team2
 
-    print(title)
+    # print(title)
 
     #Getting current score
 
